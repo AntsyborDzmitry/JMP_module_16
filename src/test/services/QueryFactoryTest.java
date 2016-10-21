@@ -19,10 +19,4 @@ public class QueryFactoryTest {
         assertEquals(expectedName, new QueryFactory().getQuery("GET_PERSON"));
     }
 
-    @Test
-    public void getPersonByAgeQueryTest(){
-
-        String expectedName = "SELECT * FROM person WHERE AGE = ?";
-        assertEquals(expectedName, new QueryFactory().getQuery("GET_PERSON_BY_AGE"));
-    }
 }

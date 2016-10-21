@@ -10,7 +10,7 @@ public class Main {
          * Work with Derby DB
          */
 
-        AbstractManagerFactory dbManager = new PersonManagerFromDBFactory();
+     /*   AbstractManagerFactory dbManager = new PersonManagerFromDBFactory();
         PersonManager pmDB = dbManager.createPersonManager();
         Person p = pmDB.readPerson();
 
@@ -27,7 +27,7 @@ public class Main {
             System.out.println("Write and read written by name from DB ->   "+p.getName()+" , " + p.getAge());
         }else {
             System.out.println("Entries with name " + name + " not found in file storage.");
-        }
+        }*/
 
         System.out.println("*************************************************************************************");
 
