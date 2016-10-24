@@ -38,7 +38,7 @@ public class PersonManagerFromDB implements PersonManager {
         }
     }
 
-    public Person readPerson() {
+    public Person readLastPerson() {
         String query = qf.getQuery(GET_PERSON);
 
         Person person = null;

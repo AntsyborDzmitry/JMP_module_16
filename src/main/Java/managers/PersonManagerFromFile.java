@@ -27,7 +27,7 @@ File f = new File(FILE_PATH);
 
     }
 
-    public Person readPerson() {
+    public Person readLastPerson() {
         Person p = new Person();
         String line = "";
         String cvsSplitBy = ",";
