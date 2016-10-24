@@ -1,8 +1,7 @@
 import beans.Person;
-import factories.AbstractManagerFactory;
-import factories.PersonManagerFromDBFactory;
-import factories.PersonManagerFromFileFactory;
 import managers.PersonManager;
+import managers.PersonManagerFromDB;
+import managers.PersonManagerFromFile;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,8 +9,8 @@ public class Main {
          * Work with Derby DB
          */
 
-        AbstractManagerFactory dbManager = new PersonManagerFromDBFactory();
-        PersonManager pmDB = dbManager.createPersonManager();
+
+        PersonManager pmDB = new PersonManagerFromDB();
         Person p = pmDB.readLastPerson();
 
         System.out.println("read last from DB ->    "+p.getName()+" , " + p.getAge());
@@ -35,8 +34,7 @@ public class Main {
          *  Work with CSV file
          */
 
-        AbstractManagerFactory FileManager = new PersonManagerFromFileFactory();
-        PersonManager pmF = FileManager.createPersonManager();
+        PersonManager pmF = new PersonManagerFromFile();
 
         Person pF = new Person("Dzmitry",35);
         Person pF1 = new Person("Sergey",35);

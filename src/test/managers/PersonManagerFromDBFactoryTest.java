@@ -59,7 +59,6 @@ public class PersonManagerFromDBFactoryTest {
         when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true,false);
         when(resultSet.getString("NAME")).thenReturn(name);
-
         Person person = personManagerFromDB.readLastPerson();
         assertEquals(person.getName(), name);
     }
@@ -70,8 +69,7 @@ public class PersonManagerFromDBFactoryTest {
         String  name = "Alex";
         when(connectionDAO.getConnection()).thenReturn(connection);
         when(connection.prepareStatement(query)).thenReturn(preparedStatement);
-        when( preparedStatement.executeQuery()).thenReturn(resultSet);
-
+        when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true,false);
         when(resultSet.getString("NAME")).thenReturn(name);
 
